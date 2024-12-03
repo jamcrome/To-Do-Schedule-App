@@ -16,8 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.http import JsonResponse
+
+
+def test_connection(request):
+    return JsonResponse({"connected": True})
 
 urlpatterns = [
+    path("", test_connection),
     path('admin/', admin.site.urls),
     path('api/v1/users/', include('user_app.urls'))
 ]

@@ -6,10 +6,10 @@ import { useState } from "react";
 
 function SignUpForm() {
 
-  // const { setUser } = useOutletContext();
+  const { setUser } = useOutletContext();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [display_name, setDisplayName] = useState("");
+  // const [display_name, setDisplayName] = useState("");
   // const [registered, setRegistered] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -38,7 +38,7 @@ function SignUpForm() {
           We'll never share your email with anyone else.
         </Form.Text>
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicDisplayName">
+      {/* <Form.Group className="mb-3" controlId="formBasicDisplayName">
         <Form.Label>Display Name</Form.Label>
         <Form.Control
           value={display_name}
@@ -46,7 +46,7 @@ function SignUpForm() {
           type="name"
           placeholder="Display Name"
         />
-      </Form.Group>
+      </Form.Group> */}
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
         <Form.Control
